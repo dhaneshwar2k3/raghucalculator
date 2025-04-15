@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raghu SGPA/CGPA Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>SGPA / CGPA Calculator</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>SGPA Calculator</h2>
+      <label for="numSubjects">Enter Number of Subjects:</label>
+      <input type="number" id="numSubjects" min="1" />
+      <button onclick="generateSubjectInputs()">Generate Inputs</button>
+    
+      <form id="subjectsForm" onsubmit="event.preventDefault(); calculateSGPA();"></form>
+      <div id="sgpaResult"></div>
+    </section>
+    
+    <hr style="margin: 40px 0; border-color: #333;" />
+    
+    <section>
+      <h2>CGPA Calculator</h2>
+      <label for="sgpaList">Enter SGPAs (comma separated):</label>
+      <input type="text" id="sgpaList" placeholder="e.g., 8.2, 7.5, 9.0" />
+      <button onclick="calculateCGPA()">Calculate CGPA</button>
+      <div id="cgpaResult"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 MonksOnDuty. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
